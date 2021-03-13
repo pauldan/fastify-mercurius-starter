@@ -1,0 +1,14 @@
+scalar DateTime
+
+type Query {
+  add(x: Int, y: Int): Int
+  users: [User]
+}
+
+type User {
+  id: ID!
+  email: String!
+  name: String
+  password: String!
+  createdAt: DateTime
+}
