@@ -23,7 +23,7 @@ module.exports = fp(
       ide: false,
       jit: 1,
       path: app.config.GRAPHQL_URL,
-      context: (request, reply) => {
+      context: request => {
         return {
           session: request.session,
           db,

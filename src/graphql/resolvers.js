@@ -18,8 +18,9 @@ const resolvers = {
       session.set('userId', user.id);
       return user;
     },
-    me: (parent, args, { db, session }, info) => {
+    me: (parent, args, { db, session }) => {
       const userId = session && session.get('userId');
+
       if (userId) {
         return db.users.find(u => u.id === userId);
       }

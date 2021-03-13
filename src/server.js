@@ -1,9 +1,11 @@
 'use strict';
 const fastify = require('fastify');
+const pinoPretty = require('pino-pretty');
 
 const server = fastify({
   logger: {
     prettyPrint: true,
+    pretiffier: pinoPretty,
     level: 'debug',
   },
 })
